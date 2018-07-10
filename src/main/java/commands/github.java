@@ -17,7 +17,7 @@ public class github implements runinterface {
         event.getTextChannel().sendMessage(
                 new EmbedBuilder().setColor(Color.BLACK)
                         .setTitle("Code:Neo GitHub repository")
-                        .setDescription("[GitHub repository](https://github.com/shinixsensei-dev/Code-Neo)").build()).queue();
+                        .setDescription("[GitHub repository](https://github.com/shinixsensei-dev/code-neo-bot)").build()).queue();
 
     }
 
