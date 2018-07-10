@@ -1,0 +1,1 @@
+worker: java -jar target/codeneo-1.0-SNAPSHOT.jar
