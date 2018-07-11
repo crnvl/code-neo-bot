@@ -14,6 +14,7 @@ public class mute implements runinterface {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
+        if (event.getGuild().getMember(event.getMessage().getAuthor()).hasPermission(Permission.MANAGE_SERVER)) {
         if(args.length < 1) {
             event.getTextChannel().sendMessage(
                     new EmbedBuilder().setColor(Color.RED)
@@ -26,6 +27,9 @@ public class mute implements runinterface {
                             .setTitle("User muted")
                             .setDescription(event.getMessage().getMentionedMembers().get(0).getEffectiveName() + " has been muted!").build()).queue();
         }
+            }else 
+           event.getMessage().getTextchannel().sendMessage("You don't have the permission to do that!").queue();
+    }
     }
 
     @Override
