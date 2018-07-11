@@ -16,7 +16,7 @@ public class usercount implements runinterface {
         event.getTextChannel().sendMessage(
                 new EmbedBuilder().setColor(Color.BLACK)
                         .setTitle("Code:Neo Usercount")
-                        .setDescription(event.getJDA().getSelfUser().getAsMention() + " is running for " + event.getJDA().getUsers().size() + "User(s)").build()).queue();
+                        .setDescription(event.getJDA().getSelfUser().getAsMention() + " is running for " + event.getJDA().getUsers().size() + " User(s)").build()).queue();
     }
 
     @Override
