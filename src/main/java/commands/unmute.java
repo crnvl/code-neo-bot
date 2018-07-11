@@ -14,6 +14,7 @@ public class unmute implements runinterface {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
+         if (event.getGuild().getMember(event.getMessage().getAuthor()).hasPermission(Permission.MANAGE_SERVER)) {
         if (args.length < 1) {
             event.getTextChannel().sendMessage(
                     new EmbedBuilder().setColor(Color.RED)
@@ -26,6 +27,9 @@ public class unmute implements runinterface {
                             .setTitle("User unmuted")
                             .setDescription(event.getMessage().getMentionedMembers().get(0).getEffectiveName() + " has been unmuted!").build()).queue();
         }
+           }else {
+             event.getMessage().getTextchannel().sendMessage("You don't have the permission to do that!").queue();
+             }
 
     }
 
