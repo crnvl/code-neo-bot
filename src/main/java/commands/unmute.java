@@ -28,7 +28,7 @@ public class unmute implements runinterface {
                             .setDescription(event.getMessage().getMentionedMembers().get(0).getEffectiveName() + " has been unmuted!").build()).queue();
         }
            }else {
-             event.getMessage().getTextchannel().sendMessage("You don't have the permission to do that!").queue();
+             event.getMessage().getTextChannel().sendMessage("You don't have the permission to do that!").queue();
              }
 
     }
