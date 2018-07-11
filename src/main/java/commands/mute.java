@@ -30,7 +30,7 @@ public class mute implements runinterface {
             }else 
            event.getMessage().getTextchannel().sendMessage("You don't have the permission to do that!").queue();
     }
-    }
+  }
 
     @Override
     public void executed(boolean success, MessageReceivedEvent event) {
