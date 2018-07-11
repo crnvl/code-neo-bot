@@ -18,7 +18,7 @@ public class help implements runinterface {
                 new EmbedBuilder().setColor(Color.BLACK)
                         .setTitle("Code:Neo Command List")
                         .setDescription("__**BOT RELATED**__\n``cn:help``, ``cn:github``, ``cn:servercount``, ``cn:usercount``, ``cn:bugreport``\n\n" +
-                                        "__**MODERATION**__\n``cn:kick``, ``cn:ban``\n\n" +
+                                        "__**MODERATION**__\n``cn:kick``, ``cn:ban``, ``cn:mute``, ``cn:unmute``\n\n" +
                                         "__**SERVER**__\n``cn:serverinfo``\n\n" +
                                         "__**FUN**__\n``cn:say``")
                         .setFooter("Created by " + event.getJDA().getUserById("265849018662387712").getName(), event.getJDA().getUserById("265849018662387712").getAvatarUrl())

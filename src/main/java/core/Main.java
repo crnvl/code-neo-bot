@@ -70,5 +70,9 @@ public class Main {
 
         CommandHandler.commands.put("bugreport", new bugreport());
 
+        CommandHandler.commands.put("mute", new mute());
+
+        CommandHandler.commands.put("unmute", new unmute());
+
     }
 }
