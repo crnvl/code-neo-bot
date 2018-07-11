@@ -27,10 +27,9 @@ public class mute implements runinterface {
                             .setTitle("User muted")
                             .setDescription(event.getMessage().getMentionedMembers().get(0).getEffectiveName() + " has been muted!").build()).queue();
         }
-            }else 
-           event.getMessage().getTextchannel().sendMessage("You don't have the permission to do that!").queue();
-    }
-  }
+          }else{
+                event.getMessage().getTextChannel().sendMessage("You don't have the permission to do that!").queue();
+            }
 }
 
     @Override
