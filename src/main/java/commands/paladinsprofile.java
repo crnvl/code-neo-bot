@@ -14,7 +14,7 @@ import java.awt.*;
 public class paladinsprofile implements runinterface {
 
     public static PaladinsAPI api = new PaladinsAPI(System.getenv("P_DID"), System.getenv("P_DKEY"), Platform.PC);
-    //
+    //System.getenv("P_DID") , System.getenv("P_DKEY")
 
     @Override
     public boolean called(String[] args, MessageReceivedEvent event) {
@@ -27,7 +27,6 @@ public class paladinsprofile implements runinterface {
             PaladinsPlayer p = api.getRequestManager().requestPlayer(args[0]);
             event.getTextChannel().sendMessage(
                     new EmbedBuilder().setColor(Color.BLACK)
-                            .setTitle("Paladins: Champions of the Realm")
                             .setTitle("User: " + p.getName() + " | ID: " + p.getID() + " | Level: " + p.getLevel())
                             .addField("Wins", " " + p.getWins(), true)
                             .addField("Losses", " " + p.getLosses(), true)
@@ -35,7 +34,8 @@ public class paladinsprofile implements runinterface {
                             .addField("Join date", " " + p.getJoinDate(), true)
                             .addField("Last Login", " " + p.getLastLogin(), true)
                             .addField("Total Achievements", " " + p.getTotalArchievements() + "/58", true)
-                            .setImage("https://i.pinimg.com/originals/e4/df/a2/e4dfa24b1b0c57472ffec4a0a99ef59b.jpg")
+                            .addField("Region", " " + p.getRegion(), true)
+                            .setThumbnail("https://i.pinimg.com/originals/e4/df/a2/e4dfa24b1b0c57472ffec4a0a99ef59b.jpg")
                             .setFooter("All rights reserved to HiRez and the Paladins Team", "https://i.pinimg.com/originals/e4/df/a2/e4dfa24b1b0c57472ffec4a0a99ef59b.jpg")
                             .build()).queue();
             /// and others
