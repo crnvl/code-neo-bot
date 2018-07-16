@@ -14,7 +14,6 @@ public class unmute implements runinterface {
 
     @Override
     public void action(String[] args, MessageReceivedEvent event) {
-<<<<<<< HEAD
         if (event.getGuild().getMember(event.getMessage().getAuthor()).hasPermission(Permission.MANAGE_SERVER)) {
             if (args.length < 1) {
                 event.getTextChannel().sendMessage(
@@ -32,24 +31,7 @@ public class unmute implements runinterface {
             }
         }else {
             event.getMessage().getTextChannel().sendMessage("You don't have the permission to do that!").queue();
-=======
-         if (event.getGuild().getMember(event.getMessage().getAuthor()).hasPermission(Permission.MANAGE_SERVER)) {
-        if (args.length < 1) {
-            event.getTextChannel().sendMessage(
-                    new EmbedBuilder().setColor(Color.RED)
-                            .setTitle("ERROR")
-                            .setDescription("Please mention a user!").build()).queue();
-        } else {
-            event.getTextChannel().putPermissionOverride(event.getMessage().getMentionedMembers().get(0)).setAllow(Permission.MESSAGE_WRITE).queue();
-            event.getTextChannel().sendMessage(
-                    new EmbedBuilder().setColor(Color.BLACK)
-                            .setTitle("User unmuted")
-                            .setDescription(event.getMessage().getMentionedMembers().get(0).getEffectiveName() + " has been unmuted!").build()).queue();
->>>>>>> 7b26200d74144a0ce12fc50422c9c7bcb4b92847
         }
-           }else {
-             event.getMessage().getTextChannel().sendMessage("You don't have the permission to do that!").queue();
-             }
 
     }
 
