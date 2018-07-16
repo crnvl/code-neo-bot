@@ -38,8 +38,6 @@ public class Main {
             JDA jda = builder.buildBlocking();
         } catch (LoginException e) {
             e.printStackTrace();
-            builder.setStatus(OnlineStatus.IDLE);
-            builder.setGame(Game.playing("low processing mode!"));
         } catch (InterruptedException e) {
             e.printStackTrace();
             builder.setStatus(OnlineStatus.IDLE);
@@ -73,6 +71,11 @@ public class Main {
         CommandHandler.commands.put("mute", new mute());
 
         CommandHandler.commands.put("unmute", new unmute());
+
+        CommandHandler.commands.put("info", new info());
+
+        CommandHandler.commands.put("p", new paladinsprofile());
+        CommandHandler.commands.put("paladins", new paladinsprofile());
 
     }
 }
