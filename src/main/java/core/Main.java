@@ -1,11 +1,7 @@
 package core;
 
-import commands.*;
-import commands.globalchat.registerCommand;
-import commands.newcmds.FakeUserCommand;
-import commands.newcmds.animojione;
-import commands.newcmds.biosetcmd;
-import commands.newcmds.profilecard;
+
+;
 import config.settings;
 import listeners.*;
 import net.dv8tion.jda.core.AccountType;
@@ -13,7 +9,6 @@ import net.dv8tion.jda.core.JDA;
 import net.dv8tion.jda.core.JDABuilder;
 import net.dv8tion.jda.core.OnlineStatus;
 import net.dv8tion.jda.core.entities.Game;
-import worker.CommandHandler;
 
 import javax.security.auth.login.LoginException;
 import java.util.HashMap;
@@ -32,7 +27,7 @@ public class Main {
         //Important
         builder.setToken(settings.TOKEN);
         builder.setAutoReconnect(true);
-        builder.setAudioEnabled(true);  
+        builder.setAudioEnabled(true);
 
         //Status
         builder.setStatus(OnlineStatus.ONLINE);
